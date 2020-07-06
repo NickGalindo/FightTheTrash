@@ -1,0 +1,119 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://Assets/Enemies/CoalBat/Attack/CoalBat_attacking2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Enemies/CoalBat/Attack/CoalBat_attacking5.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Enemies/CoalBat/Flying/CoalBat_Flying4.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Enemies/CoalBat/Attack/CoalBat_attacking7.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Enemies/CoalBat/Flying/CoalBat_Flying8.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Enemies/CoalBat/Flying/CoalBat_Flying5.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Enemies/CoalBat/Attack/CoalBat_attacking4.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Enemies/CoalBat/Attack/CoalBat_attacking6.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Enemies/CoalBat/Attack/CoalBat_attacking8.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Enemies/CoalBat/Flying/CoalBat_Flying7.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Enemies/CoalBat/Attack/CoalBat_attacking3.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Enemies/CoalBat/Flying/CoalBat_Flying6.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Enemies/CoalBat/Attack/CoalBat_attacking1.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Enemies/CoalBat/Flying/CoalBat_Flying1.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Enemies/CoalBat/Flying/CoalBat_Flying2.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Enemies/CoalBat/Flying/CoalBat_Flying3.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Enemies/CoalBat/Dead/CoalBat_dead1.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Enemies/CoalBat/Dead/CoalBat_dead5.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Enemies/CoalBat/Hurt/CoalBat_hurt1.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Enemies/CoalBat/Hurt/CoalBat_hurt4.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Enemies/CoalBat/Hurt/CoalBat_hurt2.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Enemies/CoalBat/Dead/CoalBat_dead3.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Enemies/CoalBat/Dead/CoalBat_dead4.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Enemies/CoalBat/Dead/CoalBat_dead2.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Enemies/CoalBat/Hurt/CoalBat_hurt3.png" type="Texture" id=25]
+[ext_resource path="res://CoalBat.gd" type="Script" id=26]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 21 ), ExtResource( 25 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "Damaged",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 1 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "Dead",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Flying",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12, 11 )
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 22.0227
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 13, 12 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 117.516
+
+[node name="CoalBat" type="KinematicBody2D"]
+collision_layer = 4
+script = ExtResource( 26 )
+
+[node name="BatSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -17 )
+frames = SubResource( 1 )
+animation = "Damaged"
+
+[node name="GroundCollision" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -15 )
+shape = SubResource( 2 )
+
+[node name="AttackAreaPatrol" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="AttackAreaPatrolCollider" type="CollisionShape2D" parent="AttackAreaPatrol"]
+position = Vector2( 0, -21 )
+shape = SubResource( 4 )
+
+[node name="BatHitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="BatHitboxCollider" type="CollisionShape2D" parent="BatHitbox"]
+position = Vector2( 0, -15 )
+shape = SubResource( 3 )
+
+[node name="PatrolArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="PatrolArreaCollider" type="CollisionShape2D" parent="PatrolArea"]
+position = Vector2( 0, -19 )
+shape = SubResource( 5 )
+
+[node name="AttackArea" type="Area2D" parent="." groups=[
+"bat_attack",
+]]
+collision_layer = 8
+
+[node name="AttackAreaCollider" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2( 0, -21 )
+shape = SubResource( 4 )
+disabled = true
+[connection signal="animation_finished" from="BatSprite" to="." method="_on_BatSprite_animation_finished"]
+[connection signal="area_entered" from="AttackAreaPatrol" to="." method="_on_AttackAreaPatrol_area_entered"]
+[connection signal="area_exited" from="AttackAreaPatrol" to="." method="_on_AttackAreaPatrol_area_exited"]
+[connection signal="area_entered" from="BatHitbox" to="." method="_on_BatHitbox_area_entered"]
+[connection signal="area_entered" from="PatrolArea" to="." method="_on_PatrolArea_area_entered"]
+[connection signal="area_exited" from="PatrolArea" to="." method="_on_PatrolArea_area_exited"]

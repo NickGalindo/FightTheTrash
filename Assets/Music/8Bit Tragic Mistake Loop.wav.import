@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/8Bit Tragic Mistake Loop.wav-8ad80b5dfeef09fef0a5fba7254cf05a.sample"
+
+[deps]
+
+source_file="res://Assets/Music/8Bit Tragic Mistake Loop.wav"
+dest_files=[ "res://.import/8Bit Tragic Mistake Loop.wav-8ad80b5dfeef09fef0a5fba7254cf05a.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

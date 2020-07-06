@@ -1,0 +1,148 @@
+[gd_scene load_steps=65 format=2]
+
+[ext_resource path="res://RadioactiveSkeleton.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk4.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk6.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk10.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk12.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk5.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk8.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk11.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk7.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk13.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Walk9.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack4.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle4.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle3.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack8.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack1.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack14.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle1.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack16.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle2.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle5.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle10.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle7.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle6.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack2.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle9.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle8.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Idle11.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack7.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack11.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack3.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack6.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack5.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack9.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack17.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack10.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack12.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack15.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack18.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Attack13.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Damaged5.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Damaged4.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Dead9.png" type="Texture" id=46]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Dead2.png" type="Texture" id=47]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Dead7.png" type="Texture" id=48]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Damaged2.png" type="Texture" id=49]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Damaged7.png" type="Texture" id=50]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Damaged6.png" type="Texture" id=51]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Dead5.png" type="Texture" id=52]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Dead6.png" type="Texture" id=53]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Dead4.png" type="Texture" id=54]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Dead8.png" type="Texture" id=55]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Damaged3.png" type="Texture" id=56]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Dead3.png" type="Texture" id=57]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Dead1.png" type="Texture" id=58]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Damaged8.png" type="Texture" id=59]
+[ext_resource path="res://Assets/Enemies/Radioactive Skeleton/Skeleton_Damaged1.png" type="Texture" id=60]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 23 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 31 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 60 ), ExtResource( 49 ), ExtResource( 56 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 50 ), ExtResource( 59 ) ],
+"loop": true,
+"name": "Damaged",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 28 ), ExtResource( 34 ), ExtResource( 15 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 32 ), ExtResource( 18 ), ExtResource( 37 ), ExtResource( 39 ), ExtResource( 33 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 20 ), ExtResource( 41 ), ExtResource( 22 ), ExtResource( 38 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 58 ), ExtResource( 47 ), ExtResource( 57 ), ExtResource( 54 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 48 ), ExtResource( 55 ), ExtResource( 46 ) ],
+"loop": false,
+"name": "Dead",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 7, 14 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 11 )
+
+[node name="RadioactiveSkeleton" type="KinematicBody2D"]
+collision_layer = 4
+script = ExtResource( 1 )
+
+[node name="SkeletonSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -19 )
+frames = SubResource( 1 )
+animation = "Dead"
+frame = 2
+
+[node name="GroundCollider" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -11 )
+shape = SubResource( 2 )
+
+[node name="AttackArea" type="Area2D" parent="." groups=[
+"skeleton_attack",
+]]
+collision_layer = 8
+
+[node name="AttackAreaCollider" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2( 13, -14 )
+shape = SubResource( 3 )
+disabled = true
+
+[node name="FindRayRight" type="RayCast2D" parent="."]
+position = Vector2( 0, -19 )
+enabled = true
+cast_to = Vector2( 400, 0 )
+
+[node name="FindRayLeft" type="RayCast2D" parent="."]
+position = Vector2( 0, -19 )
+enabled = true
+cast_to = Vector2( -400, 0 )
+
+[node name="SkeletonHitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="SkeletonHitboxCollider" type="CollisionShape2D" parent="SkeletonHitbox"]
+position = Vector2( 0, -12 )
+shape = SubResource( 4 )
+
+[node name="AttackRay" type="RayCast2D" parent="."]
+position = Vector2( 0, -19 )
+enabled = true
+cast_to = Vector2( 12, 0 )
+[connection signal="animation_finished" from="SkeletonSprite" to="." method="_on_SkeletonSprite_animation_finished"]
+[connection signal="area_entered" from="SkeletonHitbox" to="." method="_on_SkeletonHitbox_area_entered"]
